@@ -82,7 +82,7 @@ Used helpers and their sources:
 
 ## 🧑🏼‍ Actor Diagram
 _Which actors are there in your application? (actor diagram)_
-![actor diagram](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/actordiagram-01.png)
+![actor diagram](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/actordiagram.png)
 
 
 ## ↔️ Interaction diagram
@@ -332,29 +332,27 @@ _What would you like to add (feature wishlist / backlog)?_
 ## 🏫 Assignment
 <details>
   <summary></strong> (click to expand)</summary>
-  In this course I learned to convert the client side web application previously made at [WAFS](https://github.com/deannabosschert/web-app-from-scratch-1920) into a server side rendered application. I also added functionalities based on the Service Worker and turned the application into a Progressive Web App. Ultimately I implemented a series of optimisations to improve the performance of the application.
+  In this course I learned..
 
 
 ### Learning goals
-- _You understand the difference between client side and server side rendering and you can apply server side rendering in your application_
-- _You understand how a Service Worker works and you can implement it in your application._
-- _|You understand how the critical render path works and how you can optimize it for a better runtime and / or perceived performance._
+- _You understand...
 
-### Week 1 - Server Side Rendering 📡
-Goal: Render web pages server side
+### Week 1 - xx
+Goal: xxx
 
-### Week 2 - Progressive Web App 🚀
-Goal: Convert application to a Progressive Web App
+### Week 2 - Corona INC
+Goal: xxx
 
-### Week 3 - Critical Rendering Path 📉
-Goal: Optimize the Critical Rendering Path
+### Week 3 - xxx
+Goal: xxx
 
 </details>
 
-### [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSc48v1nrjcwH0llcTd68xyK7f2fDC2UL4d6h4ZNW3DU8ucez6ZOHiId1XSX0RP5ByvLC8p5pVUGZT4/pubhtml)
+### [Rubric]()
 
 [Rubric- detailed rating of my project](https://github.com/deannabosschert/browser-technologies-1920/wiki/Rubric)
-![screenshot of rubric](https://paper-attachments.dropbox.com/s_A55BA87DF43E0052AB57F649BA137E30CE3E70844B24A22C6154EAF552B93169_1583836131204_Screenshot+2020-03-10+at+11.28.29.png)
+![screenshot of rubric]()
 
 
 ## ℹ️ Resources
