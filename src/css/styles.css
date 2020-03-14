@@ -1,0 +1,191 @@
+/* BASE */
+:root {
+  --purpleGrey: rgb(114,92,122, 0.2)
+}
+@import 'reset.css';
+
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+}
+
+body {
+  background-color: #000;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows auto;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+  color: white;
+  font-weight: bold;
+  font-variant: small-caps;
+  background-color: #4b0082;
+  display: grid;
+  grid-template-columns: 10vw 45vw 45vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nav headerTitle headerTitle"
+}
+
+.headerTitle {
+  grid-area: headerTitle;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+section {
+}
+
+
+h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-variant: small-caps;
+}
+
+p {
+  max-width: 100%;
+  font-size: 1.2rem;
+}
+
+ul {
+  background-color: white;
+  padding: 2rem;
+  z-index: 10;
+}
+
+ul li {
+  margin-left: 1rem;
+}
+
+/* LAYOUT */
+/* .overview {
+  display: grid;
+} */
+
+/* MODULES */
+.backToTop {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  margin-top: 20vh;
+  margin-left: 80%;
+  z-index: 20;
+  position: fixed;
+}
+
+.student {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 25px;
+  box-shadow: 10px 10px 6px -8px rgba(255, 255, 255, 1);
+}
+
+.avatar {
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  border: 3px solid grey;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* STATE */
+.loading {
+  pointer-events: none;
+  width: 4rem;
+  height: 4rem;
+  border: 0.6em solid transparent;
+  border-color: rgb(216, 191, 216);
+  border-top-color: rgb(238, 130, 238);
+  border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+}
+
+@keyframes loadingspin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+/* skeleton */
+.student h3:empty {
+  width: 80%;
+  height: 1.4rem;
+  animation : shineBright 1.8s infinite linear;
+}
+
+.student p:empty {
+  width: 90%;
+  height: 1.2rem;
+  margin: 0.7rem;
+  animation : shineBright 1.8s infinite linear;
+}
+
+.student img[src=""] {
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  border: none;
+  animation: shineBright 2.1s infinite linear;
+}
+
+.student img {
+  animation: shineBright 2.1s linear;
+  animation-iteration-count: 20;
+}
+
+.avatarWrapper {
+  background-color: var(--purpleGrey);
+  position: relative;
+  width: 100%;
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+.avatarWrapper:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  background-color: var(--purpleGrey);
+}
+
+@keyframes shineBright {
+  0% { background: linear-gradient(to right, #E6E6FA 20%, #d3d3e6 70%, #E6E6FA 20%);
+   background-size: 1000px 100%;
+    background-position: -1000px 0;
+  }
+  100% {
+    background: linear-gradient(to right, #E6E6FA 20%, #d3d3e6 70%, #E6E6FA 20%);
+    background-size: 1000px 100%;
+    background-position: 1000px 0;
+  }
+}
+
+/* THEME */
