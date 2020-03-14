@@ -1,0 +1,25 @@
+<!doctype html>
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+<main>
+  <div id="overview">
+    <h1>Profiel voor <%= nerd.owner.login %></h1>
+    <article class="student">
+      <h3><%= nerd.name %></h3>
+      <div class="avatarWrapper">
+        <img class="avatar" id="avatar" src="<%= nerd.owner.avatar_url %>" alt="<%= nerd.full_name %>">
+      </div>
+      <p><%= nerd.description %></p>
+      <p><%= nerd.html_url %></p>
+      <p><%= nerd.homepage %></p>
+      <p><%= nerd.id %></p>
+      <p class="private"><%= nerd.private %></p>
+      <p><%= nerd.full_name %></p>
+    </article>
+  </div>
+
+  <a class="backToTop" href="#top">Back to top</a>
+</main>
+
+<%- include('./partials/foot.ejs') %>
