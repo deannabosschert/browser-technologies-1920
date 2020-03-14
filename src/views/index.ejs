@@ -1,0 +1,27 @@
+<!doctype html>
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+<main>
+  <section class="overview">
+    <h1>All courses</h1>
+    <% repos.forEach((repo)=> { %>
+    <article class="student">
+      <a href="/course/<%= repo.name %>"> Go to course
+      </a>
+      <h3><% repo.name %></h3>
+      <div class="avatarWrapper">
+        <img class="avatar" id="avatar" src="<%= repo.avatar %>" alt="<%= repo.full_name %>">
+      </div>
+      <p><%= repo.description %></p>
+      <p><%= repo.html_url %></p>
+      <p><%= repo.homepage %></p>
+      <p><%= repo.id %></p>
+      <p class="private"><%= repo.private %></p>
+      <p><%= repo.full_name %></p>
+      <% }) %>
+    </article>
+  </section>
+</main>
+
+<%- include('./partials/foot.ejs') %>
