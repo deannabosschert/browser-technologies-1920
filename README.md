@@ -79,6 +79,9 @@ Lijst van de ingevoerde dosissen
 Een overzicht bekijken van de afgelopen week qua dosissen
 Een graph bekijken hiervan (enhancement?)
 
+Vandaag: basis
+Morgen: focus op enhancement
+
 
 
 ## ⚙️ Installation
