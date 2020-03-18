@@ -61,6 +61,23 @@ _What does your app do, what is the goal? (passing butter)_
 
 This app is for keeping track of my medicine intake.
 
+Quick wireframes:
+Homepage
+![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/screen_1.jpg)
+![add dose-popup](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/screen_2.jpg)
+
+
+De gebruiker kan:
+Een dosis toevoegen, en daarbij de naam, datum+tijd en hoeveelheid aangeven
+Een dosis aanpassen
+Een dosis weghalen
+Lijst van de ingevoerde dosissen
+
+Een overzicht bekijken van de afgelopen week qua dosissen
+Een graph bekijken hiervan (enhancement?)
+
+
+
 ## ⚙️ Installation
 Clone this repository to your own device:
 ```bash
