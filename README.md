@@ -76,6 +76,8 @@ Een dosis aanpassen
 Een dosis weghalen
 Lijst van de ingevoerde dosissen
 
+
+Pleasureable laag:
 Een overzicht bekijken van de afgelopen week qua dosissen
 Een graph bekijken hiervan (enhancement?)
 
