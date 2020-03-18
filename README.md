@@ -62,8 +62,11 @@ _What does your app do, what is the goal? (passing butter)_
 This app is for keeping track of my medicine intake.
 
 Quick wireframes:
+![both wireframes](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/wireframes-01.jpg)
+
 Homepage
 ![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/screen_1.jpg)
+Add dose (when user clicks on '+')
 ![add dose-popup](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/screen_2.jpg)
 
 
