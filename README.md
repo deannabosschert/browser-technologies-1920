@@ -62,7 +62,7 @@ _What does your app do, what is the goal? (passing butter)_
 This app is for keeping track of my medicine intake.
 
 Quick wireframes:
-![both wireframes](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/wireframes-01.jpg)
+![both wireframes](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/wireframes-01.png)
 
 Homepage
 ![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/img/screen_1.jpg)
@@ -76,6 +76,8 @@ Een dosis aanpassen
 Een dosis weghalen
 Lijst van de ingevoerde dosissen
 
+
+Pleasureable laag:
 Een overzicht bekijken van de afgelopen week qua dosissen
 Een graph bekijken hiervan (enhancement?)
 
