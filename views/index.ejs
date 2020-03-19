@@ -1,0 +1,24 @@
+<!doctype html>
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+<main>
+  <section>
+    <h2 class="subtitle">Keep track of your medicine intake</h3>
+  </section>
+
+    <section class="totalDoses">
+      <p> Doses:  <%= doses %> </p>
+    </section>
+
+    <form action="/addDose" method="POST">
+      <button>add dose</button>
+    </form>
+  <form action="/removeDose" method="POST">
+    <button class="remove">remove dose</button>
+  </form>
+
+
+</main>
+
+<%- include('./partials/foot.ejs') %>
