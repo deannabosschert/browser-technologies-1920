@@ -1,0 +1,36 @@
+{
+  "name": "browser-technologies-1920",
+  "version": "1.0.0",
+  "description": "BT Use Case voor Minor Webdev",
+  "main": "index.js",
+  "directories": {
+    "doc": "",
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deannabosschert/browser-technologies-1920.git"
+  },
+  "author": "Deanna Bosschert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deannabosschert/browser-technologies-1920/issues"
+  },
+  "homepage": "https://github.com/deannabosschert/browser-technologies-1920#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "fs": "0.0.1-security",
+    "heroku": "^7.24.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
