@@ -4,18 +4,6 @@ https://browsertechnologies.netlify.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e56a09e1-89a2-48f3-bd77-6247d77caa09/deploy-status)](https://app.netlify.com/sites/browsertechnologies/deploys)
 
-
-**Web-app with regular internet**
-
-![gif of web app- regular internet]()
-
-**Web-app with slow 3G-internet**
-
-![gif of web app- slow 3g internet]()
-
-![screenshot of web app]()
-
-
 <details>
   <summary><strong>Table of Contents</strong> (click to expand)</summary>
 
@@ -61,13 +49,10 @@ _What does your app do, what is the goal? (passing butter)_
 
 This app is for keeping track of my medicine intake.
 
-Quick wireframes:
-![both wireframes](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/wireframes-01.png)
-
 Homepage
-![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screen_1.jpg)
+![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screen_overview_v2.png)
 Add dose (when user clicks on '+')
-![add dose-popup](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screen_2.jpg)
+![add dose-popup](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screen_addDose_v2.png)
 
 
 De gebruiker kan:
