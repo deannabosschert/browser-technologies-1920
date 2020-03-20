@@ -3,12 +3,12 @@
 <%- include('./partials/header.ejs') %>
 
 <main>
-  <section>
+  <!-- <section>
     <h2 class="subtitle">Keep track of your medicine intake</h3>
   </section>
 
     <section class="totalDoses">
-      <p> Doses:  <%= doses %> </p>
+      <p> Doseeee:  <%= doses %> </p>
     </section>
 
     <form action="/addDose" method="POST">
@@ -16,8 +16,39 @@
     </form>
   <form action="/removeDose" method="POST">
     <button class="remove">remove dose</button>
-  </form>
+  </form> -->
+  <section>
+    <h1>Today</h1>
+    <article>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>8:30</td>
+            <td>Modafinil</td>
+            <td>100</td>
+            <td>mg</td>
+            <td>icon</td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td>Modafinil</td>
+            <td>100</td>
+            <td>mg</td>
+            <td>icon</td>
+          </tr>
+          <tr>
+            <td>13:30</td>
+            <td>Modafinil</td>
+            <td>100</td>
+            <td>mg</td>
+            <td>icon</td>
+          </tr>
+        </tbody>
+      </table>
 
+
+    </article>
+  </section>
 
 </main>
 
