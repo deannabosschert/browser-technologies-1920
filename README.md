@@ -49,10 +49,19 @@ _What does your app do, what is the goal? (passing butter)_
 
 This app is for keeping track of my medicine intake.
 
+Homepage && Add dose (when user clicks on '+')
+![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screenshots.png)
+
+<details>
+  <summary><strong>Full screenshots</strong> (click to expand)</summary>
+  
 Homepage
+
 ![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screen_overview_v2.png)
-Add dose (when user clicks on '+')
+Add dose (when user clicks on '+') 
+
 ![add dose-popup](https://github.com/deannabosschert/browser-technologies-1920/blob/master/src/img/screen_addDose_v2.png)
+</details>
 
 
 De gebruiker kan:
