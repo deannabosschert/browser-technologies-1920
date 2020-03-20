@@ -1,31 +1,125 @@
 /* BASE */
-@import 'reset.css';
+/* BASE */
+: root {
+  --white:  #FFFFFF;
+  --dark:  #131C26;
+  --h1Blue:  #1F2D3D;
+  --h2BlueLight:  #8492A6;
+  --textBlue:  #1F2D3D;
+  --table1:  #EFF2F7;
+  --table2:  #FFFFFF;
+  --table3:  #F9FAFC;
+  --borderDark:  #C0CCDA;
 
-* {
-  box-sizing: border-box;
+  /* --fonth1:  32.5px; // meditrack en new dose
+  --fonth2:  24px; //today this week previous, en normale tekst en addbutton
+  --fonth3:  21px; //wednesday 18 march enzo en labels
+  --fonth4:  18px; // labels en 'januari binnen previous' */
+
+  --fonth1:  32.5px;
+  --fonth2:  24px;
+  --fonth3:  21px;
+  --fonth4:  18px;
+
+--fontWeight_1: font-weight: 100;
+--fontWeight_2: font-weight: 200;
+--fontWeight_3: font-weight: 300;
+--fontWeight_4: font-weight: 400;
+--fontWeight_5: font-weight: 500;
+--fontWeight_6: font-weight: 600;
+--fontWeight_7: font-weight: 700;
+--fontWeight_8: font-weight: 800;
+--fontWeight_9: font-weight: 900;
+
+--lineHeight_31: 31px;
+--lineHeight_27: 27px;
+--lineHeight_8: 8px;
+
+
+  --spacing-15:  15px;
+
+--font-logo: "AbrilFatface", "Palatino Linotype", Georgia, "Times New Roman", serif;
+--font-body: "Roboto", Tahoma, Helvetica, Arial, sans-serif;
 }
 
-html {
-  margin: 0;
-  padding: 0;
+@import 'reset.css';
+@import 'fonts.css';
+
+
+td {
+  color:  #1F2D3D;
+  font-family:  var;
+  font-size:  var(--fonth2);
+  font-weight:  var(--fontWeight_4);
+  line-height:  var(----lineHeight_31);
+  text-align:  left;
 }
 
 body {
-  background: rgb(236, 236, 255);
-  background: linear-gradient(90deg, rgba(236, 236, 255, 1) 0%, rgba(240, 250, 255, 1) 100%);
-  font-family: sans-serif;
-  /* display: flex; */
-  /* align-content: center; */
+  /* background:  rgb(236, 236, 255);
+  background:  linear-gradient(90deg, rgba(236, 236, 255, 1) 0%, rgba(240, 250, 255, 1) 100%);
+  font-family:  sans-serif; */
+  /* display:  flex; */
+  /* align-content:  center; */
 }
 
-header {
-  display: block;
-  align-self: center;
+.header {
+  background-color:  #1E2D3E;
+  color:  var(--white);
+  width:  540px;
+  height:  65px;
 }
 
-h1 {}
+h1 {
+  font-size:  var(--fonth1);
+  font-family: var(--font-logo);
+}
+
+h2 {
+  font-size:  var(--fonth2);
+}
+
+h3 {
+  font-size:  var(--fonth3);
+}
+
+h4 {
+  font-size:  var(--fonth4)
+}
 
 main {
-  display: flex;
-  align-content: center;
+  /* background-color:  light purple; */
+}
+
+.table {
+  width:  485px;
+  height:  57px;
+  border-left:  0.1px solid #C0CCDA;
+  border-right:  0.1px solid #C0CCDA;
+  border-collapse:  collapse;
+}
+
+.table td {
+  text-align:  left;
+  border:  0.1px solid #C0CCDA;
+  border-left:  0;
+  border-right:  0;
+  padding:  var(--spacing-15);
+}
+
+
+tr: nth-child(1n) {
+  background-color:  var(--table1);
+  /* border:  0.5px solid #C0CCDA; */
+}
+
+tr: nth-child(2n) {
+  background-color:  var(--table2);
+  /* border:  0.5px solid #C0CCDA; */
+
+}
+
+tr: nth-child(3n) {
+  background-color:  var(--table3);
+  /* border:  0.5px solid #C0CCDA; */
 }
