@@ -1,10 +1,6 @@
 # Class of 2020
 ## Browser Technologies @cmda-minor-web 1920
 
-# Feedbackgesprek vrijdag:
-Ik heb tot nu toe eigenlijk geen vragen, alleen nog veel te doen :')
-Lijkt wel goed op weg te komen, ik had een nieuw ontwerp gemaakt en zet deze nu om naar html/css; eerst basic met pixels and all ipv dynamisch, daarna spiegel ik alles eerst aan support en bouw ik middels PE verder.
-
 https://browsertechnologies.netlify.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e56a09e1-89a2-48f3-bd77-6247d77caa09/deploy-status)](https://app.netlify.com/sites/browsertechnologies/deploys)
