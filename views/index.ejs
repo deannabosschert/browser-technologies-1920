@@ -3,20 +3,25 @@
 <%- include('./partials/header.ejs') %>
 
 <main>
-  <!-- <section>
-    <h2 class="subtitle">Keep track of your medicine intake</h3>
-  </section>
-
-    <section class="totalDoses">
-      <p> Doseeee:  <%= doses %> </p>
-    </section>
-
-    <form action="/addDose" method="POST">
-      <button>add dose</button>
+  <section>
+    <form>
+      <h2>Invoeren</h2>
+      <label class="textInput" for="name">Medicijnnaam
+        <input type="text" id="name" name="name" placeholder="Modafinil" </label>
+        <label class="numberInput" for="amount">Hoeveelheid
+        <input type="number" id="amount" name="amount" placeholder="100mg" </label>
+          <!-- <button id="remove" type="submit" formaction="/remove" formmethod="post">remove</button> -->
+          <button id="add" type="submit" formaction="/add" formmethod="post">add</button>
     </form>
-  <form action="/removeDose" method="POST">
-    <button class="remove">remove dose</button>
-  </form> -->
+  </section>
+  <section>
+    <ul>
+      <% doses.forEach(function(dose) { %>
+      <li><%= dose.name %></li>
+      <li><%= dose.amount %></li>
+      <% }) %>
+    </ul>
+  </section>
   <section>
     <h1>Today</h1>
     <article>
