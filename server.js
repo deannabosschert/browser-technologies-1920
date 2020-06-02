@@ -73,25 +73,83 @@ function removeDose(req, res) {
   // iets met this.dose en body.ding en array.find
   res.redirect('/')
 }
+const testing = [{
+  '2020-06-02': [
+    ['ding1', 'ding2']
+  ],
+  '2020-09-11': [
+    ['ding3', 'ding4']
+  ]
+}]
 
 function cleanData() {
-  const groupedDoses = groupBy(rawDoses, 'date')
+  const groupedDoses = groupBy(rawDoses, "date")
   doses = []
   const totalRawDoses = doses.push(groupedDoses)
+
   // console.log(doses)
-//
-//   const diens = doses.forEach(function(dose) {
-//     const doseDate = Object.getOwnPropertyNames(dose)
-//     console.log(doseDate)
-//     // const ddd = doseDates.flat()
-//     // console.log(ddd)
-//     return doseDate
-//   })
-//
-//   const help = doses.forEach(function(dose) {
-//   const datum = Object.getOwnPropertyNames(dose)
-//   return datum
-// })
+  // ..merge in 1 array
+  console.log(doses)
+  // console.log(Object.values(doses))
+
+
+  //   const dates = doses.forEach(function(dose) {
+  //   const data = Object.getOwnPropertyNames(dose)
+  //   console.log(data)
+  //   return data
+  // })
+  //
+  // console.log('datums:')
+  // console.log(dates)
+  //
+  // const dose = doses.forEach(function(dose) {
+  // console.log(dose)
+  // })
+  // console.log(dates)
+
+  // { '2020-06-02':
+  //    [ { name: 'Modafinil',
+  //        amount: '100',
+  //        unit: 'mg',
+  //        time: '13:12',
+  //        date: '2020-06-02' },
+  //      { name: 'Modafinil',
+  //        amount: '100',
+  //        unit: 'mg',
+  //        time: '13:12',
+  //        date: '2020-06-02' } ] }
+
+  // { '2020-06-02':
+  //    [ { name: 'Modafinil',
+  //        amount: '100',
+  //        unit: 'mg',
+  //        time: '13:12',
+  //        date: '2020-06-02' },
+  //      { name: 'Modafinilss',
+  //        amount: '100',
+  //        unit: 'mg',
+  //        time: '13:12',
+  //        date: '2020-06-02' } ],
+  //   '2020-09-18':
+  //    [ { name: 'Modafinil',
+  //        amount: '100',
+  //        unit: 'mg',
+  //        time: '13:12',
+  //        date: '2020-09-18' } ] }
+  // console.log(doses)
+  //
+  //   const diens = doses.forEach(function(dose) {
+  //     const doseDate = Object.getOwnPropertyNames(dose)
+  //     console.log(doseDate)
+  //     // const ddd = doseDates.flat()
+  //     // console.log(ddd)
+  //     return doseDate
+  //   })
+  //
+  //   const help = doses.forEach(function(dose) {
+  //   const datum = Object.getOwnPropertyNames(dose)
+  //   return datum
+  // })
   // console.log(diens)
   // console.log(help)
   //
