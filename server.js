@@ -11,6 +11,7 @@ const app = express()
 
 let rawDoses = []
 let doses = []
+let dagen = []
 
 const port = process.env.PORT || 3000
 
@@ -28,7 +29,8 @@ app.use(bodyParser.urlencoded({
 
 function overview(req, res) {
   res.render("index", {
-    doses: doses
+    dagen: dagen[0],
+    doses: doses[0]
   })
 }
 
@@ -73,24 +75,23 @@ function removeDose(req, res) {
   // iets met this.dose en body.ding en array.find
   res.redirect('/')
 }
-const testing = [{
-  '2020-06-02': [
-    ['ding1', 'ding2']
-  ],
-  '2020-09-11': [
-    ['ding3', 'ding4']
-  ]
-}]
 
 function cleanData() {
   const groupedDoses = groupBy(rawDoses, "date")
   doses = []
-  const totalRawDoses = doses.push(groupedDoses)
+  const totalDoses = doses.push(groupedDoses)
 
-  // console.log(doses)
-  // ..merge in 1 array
-  console.log(doses)
+  dagen = []
+  const losseDatums = Object.keys(doses[0])
+  const totalDates = dagen.push(losseDatums)
+
+  console.log(dagen[0])
+  console.log(doses[0])
+
   // console.log(Object.values(doses))
+
+
+
 
 
   //   const dates = doses.forEach(function(dose) {

@@ -30,12 +30,9 @@
   </section>
   <section>
 
-
-      <% doses.forEach(function(dose) { %>
-      <% const dates = Object.getOwnPropertyNames(dose) %>
-      <!-- <% dates.forEach(function(date) { %> -->
+      <% dagen.forEach(function(dag) { %>
       <article>
-        <h2><%= dates %></h2>
+        <h2><%= dag %></h2>
         <table class="table">
           <tbody>
             <tr>
@@ -44,7 +41,6 @@
           </tbody>
         </table>
       </article>
-      <!-- <% }) %> -->
       <% }) %>
 
 
