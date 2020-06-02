@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 
 function overview(req, res) {
   res.render("index", {
-    dagen: dagen[0],
+    dagen: dagen,
     doses: doses[0]
   })
 }

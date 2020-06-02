@@ -30,7 +30,8 @@
   </section>
   <section>
 
-      <% dagen.forEach(function(dag) { %>
+      <% if (dagen[0]) { %>
+      <% dagen[0].forEach(function(dag) { %>
       <article>
         <h2><%= dag %></h2>
         <table class="table">
@@ -42,6 +43,7 @@
         </table>
       </article>
       <% }) %>
+      <% } %>
 
 
   </section>
