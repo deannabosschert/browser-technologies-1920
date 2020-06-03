@@ -24,13 +24,14 @@ app.use(bodyParser.urlencoded({
   .post('/add', removeDose)
   .get('/', overview)
   .listen(port, () => {
-    console.log(`Example app listening on port ${port}!`)
+    console.log(`App listening on port ${port}!`)
   })
 
 function overview(req, res) {
+  console.log(doses)
   res.render("index", {
     dagen: dagen,
-    doses: doses[0]
+    doses: doses
   })
 }
 
@@ -84,10 +85,18 @@ function cleanData() {
   dagen = []
   const losseDatums = Object.keys(doses[0])
   const totalDates = dagen.push(losseDatums)
+  // const day = dagen[0]
+  // const dag = day[0]
 
-  console.log(dagen[0])
-  console.log(doses[0])
+  // console.log(doses[0])
+  // const nieuw = doses[0]
+  // const iets = nieuw
+  //
+  // const losseDag = Object.values(nieuw)
+  // console.log(losseDag)
 
+  // console.log(dag)
+  // console.log(iets)
   // console.log(Object.values(doses))
 
 
@@ -103,10 +112,7 @@ function cleanData() {
   // console.log('datums:')
   // console.log(dates)
   //
-  // const dose = doses.forEach(function(dose) {
-  // console.log(dose)
-  // })
-  // console.log(dates)
+
 
   // { '2020-06-02':
   //    [ { name: 'Modafinil',
