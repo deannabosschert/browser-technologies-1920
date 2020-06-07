@@ -30,24 +30,10 @@
   </section>
   <section>
 
-    <% if (dagen[0]) { %>
-    <% dagen[0].forEach(function(dag) { %>
+    <% if (doseTables) { %>
+    <% doseTables.forEach(function(doseTable) { %>
     <article>
-      <h2><%= dag %></h2>
-      <table class="table">
-        <tbody>
-          <% doses.forEach(function(dose) { %>
-          <% if (dose.date == dag) { %>
-          <tr>
-            <td><%= dose.time %></td>
-            <td><%= dose.name %></td>
-            <td><%= dose.amount %></td>
-            <td><%= dose.unit %></td>
-          </tr>
-          <% } %>
-          <% }) %>
-        </tbody>
-      </table>
+      <%- doseTable %>
     </article>
     <% }) %>
     <% } %>
