@@ -1,17 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-// let doses = 0
-// let dose - object = {
-//   name: name,
-//   dose: dose,
-//   time: time,
-//   date: date
-// }
-
+let dosesByDay = []
 let rawDoses = []
-let doses = []
 let dagen = []
+let doseTables = []
 
 const port = process.env.PORT || 3000
 
@@ -28,10 +21,11 @@ app.use(bodyParser.urlencoded({
   })
 
 function overview(req, res) {
-  console.log(doses)
+  console.log('voor renderen:')
+  console.log(doseTables)
+  // console.log(doseTables[0])
   res.render("index", {
-    dagen: dagen,
-    doses: doses
+    doseTables: doseTables
   })
 }
 
@@ -44,8 +38,10 @@ function addDose(req, res) {
     date: req.body.date
   }
 
+  // rawDoses = []
   const totalRawDoses = rawDoses.push(rawDose)
   cleanData()
+  res.redirect('/')
 
 
   // const dose = cleanData(rawDose)
@@ -63,10 +59,6 @@ function addDose(req, res) {
   // const test1 = doses[0]
   // const date_name = Object.getOwnPropertyNames(test1)
   // console.log(date_name)
-
-
-
-  res.redirect('/')
 }
 
 
@@ -78,13 +70,58 @@ function removeDose(req, res) {
 }
 
 function cleanData() {
-  const groupedDoses = groupBy(rawDoses, "date")
-  doses = []
-  const totalDoses = doses.push(groupedDoses)
+  const dosesByDay = groupBy(rawDoses, "date")
 
-  dagen = []
-  const losseDatums = Object.keys(doses[0])
-  const totalDates = dagen.push(losseDatums)
+  const doses = Object.entries(dosesByDay).map(([key, value]) => {
+      return {
+          day: key,
+          medicin: value
+      }
+  })
+
+console.log('doses')
+console.log(doses)
+doseTables = []
+
+  doses.forEach(dose => {
+      let markup = ''
+      markup += createTable(dose)
+      const totals = doseTables.push(markup)
+      // console.log(totals)
+      return
+  })
+  // console.log('doseTables')
+
+  // console.log(doseTables)
+
+
+
+}
+
+// dagen = []
+  // const losseDatums = Object.keys(doses[0])
+  // const totalDates = dagen.push(losseDatums)
+  function createTable(dose) {
+      return `
+          <p>${dose.day}</p>
+          <table class="table">
+              ${dose.medicin.map(medicin => {
+                  return `
+                      <tr>
+                      <td>${medicin.time}</td>
+                      <td>${medicin.name}</td>
+                      <td>${medicin.amount}</td>
+                      <td>${medicin.unit}</td>
+                      <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
+                      </tr>
+                  `
+              }).join('')}
+          </table>
+      `
+  }
+
+
+
   // const day = dagen[0]
   // const dag = day[0]
 
@@ -161,7 +198,7 @@ function cleanData() {
   // console.log(help)
   //
   //
-}
+
 
 //   const cleanDose = rawDose.map(dose => ({
 //     name: dose.name,
