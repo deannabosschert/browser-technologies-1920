@@ -1,14 +1,14 @@
 {
   "name": "browser-technologies-1920",
   "version": "1.0.0",
-  "description": "BT Use Case voor Minor Webdev",
-  "main": "index.js",
+  "description": "Keep track of your medicine intake",
+  "main": "server.js",
   "directories": {
     "doc": "",
     "example": "examples"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
