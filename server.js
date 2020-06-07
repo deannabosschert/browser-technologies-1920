@@ -21,9 +21,6 @@ app.use(bodyParser.urlencoded({
   })
 
 function overview(req, res) {
-  console.log('voor renderen:')
-  console.log(doseTables)
-  // console.log(doseTables[0])
   res.render("index", {
     doseTables: doseTables
   })
@@ -38,27 +35,9 @@ function addDose(req, res) {
     date: req.body.date
   }
 
-  // rawDoses = []
   const totalRawDoses = rawDoses.push(rawDose)
   cleanData()
   res.redirect('/')
-
-
-  // const dose = cleanData(rawDose)
-  // update doses in localStorage here..
-
-  // const diens = doses.forEach(function(dose) {
-  //   const doseDates = Object.keys(dose)
-  //   console.log(doseDates)
-  //   // const ddd = doseDates.flat()
-  //   // console.log(ddd)
-  //   return doseDates
-  // })
-
-
-  // const test1 = doses[0]
-  // const date_name = Object.getOwnPropertyNames(test1)
-  // console.log(date_name)
 }
 
 
@@ -73,36 +52,25 @@ function cleanData() {
   const dosesByDay = groupBy(rawDoses, "date")
 
   const doses = Object.entries(dosesByDay).map(([key, value]) => {
-      return {
-          day: key,
-          medicin: value
-      }
+    return {
+      day: key,
+      medicin: value
+    }
   })
 
-console.log('doses')
-console.log(doses)
-doseTables = []
+  // clear out doseTables as we're putting in the entire log in again bc of regrouping
+  doseTables = []
 
   doses.forEach(dose => {
-      let markup = ''
-      markup += createTable(dose)
-      const totals = doseTables.push(markup)
-      // console.log(totals)
-      return
+    let markup = ''
+    markup += createTable(dose)
+    const totals = doseTables.push(markup)
+    return
   })
-  // console.log('doseTables')
-
-  // console.log(doseTables)
-
-
-
 }
 
-// dagen = []
-  // const losseDatums = Object.keys(doses[0])
-  // const totalDates = dagen.push(losseDatums)
-  function createTable(dose) {
-      return `
+function createTable(dose) {
+  return `
           <p>${dose.day}</p>
           <table class="table">
               ${dose.medicin.map(medicin => {
@@ -118,105 +86,8 @@ doseTables = []
               }).join('')}
           </table>
       `
-  }
+}
 
-
-
-  // const day = dagen[0]
-  // const dag = day[0]
-
-  // console.log(doses[0])
-  // const nieuw = doses[0]
-  // const iets = nieuw
-  //
-  // const losseDag = Object.values(nieuw)
-  // console.log(losseDag)
-
-  // console.log(dag)
-  // console.log(iets)
-  // console.log(Object.values(doses))
-
-
-
-
-
-  //   const dates = doses.forEach(function(dose) {
-  //   const data = Object.getOwnPropertyNames(dose)
-  //   console.log(data)
-  //   return data
-  // })
-  //
-  // console.log('datums:')
-  // console.log(dates)
-  //
-
-
-  // { '2020-06-02':
-  //    [ { name: 'Modafinil',
-  //        amount: '100',
-  //        unit: 'mg',
-  //        time: '13:12',
-  //        date: '2020-06-02' },
-  //      { name: 'Modafinil',
-  //        amount: '100',
-  //        unit: 'mg',
-  //        time: '13:12',
-  //        date: '2020-06-02' } ] }
-
-  // { '2020-06-02':
-  //    [ { name: 'Modafinil',
-  //        amount: '100',
-  //        unit: 'mg',
-  //        time: '13:12',
-  //        date: '2020-06-02' },
-  //      { name: 'Modafinilss',
-  //        amount: '100',
-  //        unit: 'mg',
-  //        time: '13:12',
-  //        date: '2020-06-02' } ],
-  //   '2020-09-18':
-  //    [ { name: 'Modafinil',
-  //        amount: '100',
-  //        unit: 'mg',
-  //        time: '13:12',
-  //        date: '2020-09-18' } ] }
-  // console.log(doses)
-  //
-  //   const diens = doses.forEach(function(dose) {
-  //     const doseDate = Object.getOwnPropertyNames(dose)
-  //     console.log(doseDate)
-  //     // const ddd = doseDates.flat()
-  //     // console.log(ddd)
-  //     return doseDate
-  //   })
-  //
-  //   const help = doses.forEach(function(dose) {
-  //   const datum = Object.getOwnPropertyNames(dose)
-  //   return datum
-  // })
-  // console.log(diens)
-  // console.log(help)
-  //
-  //
-
-
-//   const cleanDose = rawDose.map(dose => ({
-//     name: dose.name,
-//     amount: dose.amount,
-//     unit: dose.unit,
-//     time: dose.time,
-//     dates: {
-//       [dose.date]: dose
-//     }
-//   }))
-//   const dose = cleanDose[0].dates
-//   return dose
-// }
-// async function addtoDB () {
-//   add aan mongodb
-//   const iets = await addaanmongo
-//   reset doses naar = [] ofzo?
-// }
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property]
