@@ -3,20 +3,43 @@
 <%- include('./partials/header.ejs') %>
 
 <main>
-  <!-- <section>
-    <h2 class="subtitle">Keep track of your medicine intake</h3>
-  </section>
+  <section>
+    <form autocomplete="off">
+      <h2>Invoeren</h2>
+      <label class="textInput" for="name">Medicijnnaam
+        <input type="text" name="name" placeholder="Modafinil" required value="Modafinil">
+      </label>
+      <label class="numberInput" for="amount">Hoeveelheid
+        <input type="number" name="amount" placeholder="100" value="100" required>
+        <input list="unit" name="unit" placeholder="mg" value="mg" />
+        <datalist id="unit">
+          <option value="mg">
+          <option value="mcg">
+          <option value="g">
+        </datalist>
+      </label>
+      <label for="date">Date
+        <input type="date" name="date" min="2020-06-01" max="2020-12-24" value="2020-06-02"></label>
+      <label class="timeInput" for="time">Om welke tijd?
+        <input type="time" name="time" value="13:12" required>
+      </label>
 
-    <section class="totalDoses">
-      <p> Doseeee:  <%= doses %> </p>
-    </section>
-
-    <form action="/addDose" method="POST">
-      <button>add dose</button>
+      <!-- <button id="remove" type="submit" formaction="/remove" formmethod="post">remove</button> -->
+      <button id="add" type="submit" formaction="/add" formmethod="post">add</button>
     </form>
-  <form action="/removeDose" method="POST">
-    <button class="remove">remove dose</button>
-  </form> -->
+  </section>
+  <section>
+
+    <% if (doseTables) { %>
+    <% doseTables.forEach(function(doseTable) { %>
+    <article>
+      <%- doseTable %>
+    </article>
+    <% }) %>
+    <% } %>
+
+
+  </section>
   <section>
     <h1>Today</h1>
     <article>
@@ -27,21 +50,21 @@
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>11:30</td>
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>13:30</td>
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
         </tbody>
       </table>
@@ -58,21 +81,21 @@
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>10:30</td>
             <td>Modafinil</td>
             <td>200</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>13:50</td>
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
         </tbody>
       </table>
@@ -86,21 +109,21 @@
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>10:30</td>
             <td>Modafinil</td>
             <td>200</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>13:50</td>
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
         </tbody>
       </table>
@@ -114,21 +137,21 @@
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>10:30</td>
             <td>Modafinil</td>
             <td>200</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
           <tr>
             <td>13:50</td>
             <td>Modafinil</td>
             <td>100</td>
             <td>mg</td>
-            <td><img class="editIcon" src="./img/icon_pencil.png" alt="edit"></td>
+            <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
           </tr>
         </tbody>
       </table>
