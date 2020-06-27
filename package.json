@@ -1,8 +1,7 @@
 {
   "name": "browser-technologies-1920",
   "version": "1.0.0",
-  "description": "BT Use Case voor Minor Webdev",
-  "main": "server.js",
+  "description": "Keep track of your medicine intake",
   "directories": {
     "doc": "",
     "example": "examples"
