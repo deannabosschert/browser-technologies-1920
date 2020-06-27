@@ -232,7 +232,7 @@ Een van de mooiste principes van het web is dat het er echt is voor iedereen. Ie
 
 </details>
 
-### [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSc48v1nrjcwH0llcTd68xyK7f2fDC2UL4d6h4ZNW3DU8ucez6ZOHiId1XSX0RP5ByvLC8p5pVUGZT4/pubhtml)
+### [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/edit#gid=0)
 
 [Rubric- detailed rating of my project](https://github.com/deannabosschert/browser-technologies-1920/wiki/Rubric)
 ![screenshot of rubric](https://paper-attachments.dropbox.com/s_A55BA87DF43E0052AB57F649BA137E30CE3E70844B24A22C6154EAF552B93169_1583836131204_Screenshot+2020-03-10+at+11.28.29.png)
