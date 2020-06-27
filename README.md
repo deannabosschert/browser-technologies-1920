@@ -11,25 +11,17 @@ https://medi-track.herokuapp.com/
 - [✅ To-do](#--to-do)
 - [📋 Concept](#---concept)
 - [⚙️ Installation](#---installation)
-    + [Helpers](#helpers)
-- [🧑🏼‍ Actor Diagram](#------actor-diagram)
-- [↔️ Interaction diagram](#---interaction-diagram)
-- [🌍 Design patterns](#---design-patterns)
+    + [Helpers/dependencies](#helpers-dependencies)
+    + [🗃 Tech(stack)](#---tech-stack-)
 - [👍🏽 Best practices](#-----best-practices)
-- [🗃 Data](#---data)
-  * [🐒 Github API](#---github-api)
-    + [Properties](#properties)
-    + [Rate limiting](#rate-limiting)
   * [💽 Data cleaning](#---data-cleaning)
-    + [Filtering the data using array.filter](#filtering-the-data-using-arrayfilter)
-    + [Rendering the data to html-representation using array.map](#rendering-the-data-to-html-representation-using-arraymap)
 - [👯🏿‍ Features (+ wishlist)](#------features----wishlist-)
+- [Progressive Enhancement](#progressive-enhancement)
+- [👁️ Accessibility guidelines](#----accessibility-guidelines)
 - [🏫 Assignment](#---assignment)
-  * [Learning goals](#learning-goals)
-  * [Week 1 - Server Side Rendering 📡](#week-1---server-side-rendering---)
-  * [Week 2 - Progressive Web App 🚀](#week-2---progressive-web-app---)
-  * [Week 3 - Critical Rendering Path 📉](#week-3---critical-rendering-path---)
-  * [Rubric](#rubric)
+- [Learning goals](#learning-goals)
+- [Planning](#planning)
+  * [[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSc48v1nrjcwH0llcTd68xyK7f2fDC2UL4d6h4ZNW3DU8ucez6ZOHiId1XSX0RP5ByvLC8p5pVUGZT4/pubhtml)](#-rubric--https---docsgooglecom-spreadsheets-d-e-2pacx-1vsc48v1nrjcwh0llctd68xyk7f2fdc2ul4d6h4znw3du8ucez6zohiid1xsx0rp5byvlc8p5pvugzt4-pubhtml-)
 - [ℹ️ Resources](#---resources)
   * [Credits](#credits)
   * [Small inspiration sources](#small-inspiration-sources)
@@ -40,7 +32,7 @@ https://medi-track.herokuapp.com/
 </details>
 
 ## ✅ To-do
-
+- [ ] Test on different browsers and devices
 
 
 ## 📋 Concept
@@ -101,6 +93,9 @@ I'm making use of the following (dev)dependencies:
     "nodemon": "^2.0.2"
   }
 ```
+
+#### 🗃 Tech(stack)
+You'll find more information about the tech stack I'm using in the [wiki](https://github.com/deannabosschert/browser-technologies-1920/wiki/%F0%9F%97%83-Tech(stack))
 
 ## 👍🏽 Best practices
 - Work in branches, even if it's a one-man project. It helps staying focused on one feature until it's finished, and keeps your from doing 10 different things at the same time. Saves you merge conflicts, too.
@@ -198,13 +193,19 @@ function createTable(dose) {
 ## 👯🏿‍ Features (+ wishlist)
 _What would you like to add (feature wishlist / backlog)?_
 De gebruiker kan:
-- [ ] Een dosis toevoegen, en daarbij de naam, datum+tijd en hoeveelheid aangeven
+- [x] Een dosis toevoegen, en daarbij de naam, datum+tijd en hoeveelheid aangeven
 - [ ] Een dosis aanpassen
 - [ ] Een dosis weghalen
 
 Pleasureable laag:
-- [ ] Een overzicht bekijken van de afgelopen week qua dosissen
+- [x] Een overzicht bekijken van de afgelopen week qua dosissen
 - [ ] Een graph bekijken hiervan (enhancement?)
+
+## Progressive Enhancement
+Everthing concerning research on Progressive Enhancement, is stated in the [wiki](https://github.com/deannabosschert/browser-technologies-1920/wiki/research)
+
+## 👁️ Accessibility guidelines
+Everything concerning the accessibility guidelines, is stated in the [wiki](https://github.com/deannabosschert/browser-technologies-1920/wiki/research#accessibility).
 
 ## 🏫 Assignment
 <details>
@@ -231,10 +232,10 @@ Een van de mooiste principes van het web is dat het er echt is voor iedereen. Ie
 
 </details>
 
-### [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSc48v1nrjcwH0llcTd68xyK7f2fDC2UL4d6h4ZNW3DU8ucez6ZOHiId1XSX0RP5ByvLC8p5pVUGZT4/pubhtml)
+### [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/edit#gid=0)
 
 [Rubric- detailed rating of my project](https://github.com/deannabosschert/browser-technologies-1920/wiki/Rubric)
-![screenshot of rubric](https://paper-attachments.dropbox.com/s_A55BA87DF43E0052AB57F649BA137E30CE3E70844B24A22C6154EAF552B93169_1583836131204_Screenshot+2020-03-10+at+11.28.29.png)
+![screenshot of rubric](https://github.com/deannabosschert/browser-technologies-1920/blob/master/public/img/documentation/rubric.jpg)
 
 
 ## ℹ️ Resources
