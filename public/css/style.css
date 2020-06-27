@@ -91,7 +91,7 @@ h1 {
 
 
 h2 {
-color: #8492A6;
+color: var(--h2BlueLight);
 font-family: var(--font-body);
 font-size: 21px;
 font-weight: 400;
