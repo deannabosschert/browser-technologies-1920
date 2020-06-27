@@ -102,6 +102,9 @@ I'm making use of the following (dev)dependencies:
   }
 ```
 
+#### 🗃 Tech(stack)
+You'll find more information about the tech stack I'm using in the [wiki](https://github.com/deannabosschert/browser-technologies-1920/wiki/%F0%9F%97%83-Tech(stack))
+
 ## 👍🏽 Best practices
 - Work in branches, even if it's a one-man project. It helps staying focused on one feature until it's finished, and keeps your from doing 10 different things at the same time. Saves you merge conflicts, too.
 - ^ also helps with 'closing' a feature, so you are more likely to move on to the next. Too little time, too much ideas.
@@ -198,13 +201,19 @@ function createTable(dose) {
 ## 👯🏿‍ Features (+ wishlist)
 _What would you like to add (feature wishlist / backlog)?_
 De gebruiker kan:
-- [ ] Een dosis toevoegen, en daarbij de naam, datum+tijd en hoeveelheid aangeven
+- [x] Een dosis toevoegen, en daarbij de naam, datum+tijd en hoeveelheid aangeven
 - [ ] Een dosis aanpassen
 - [ ] Een dosis weghalen
 
 Pleasureable laag:
-- [ ] Een overzicht bekijken van de afgelopen week qua dosissen
+- [x] Een overzicht bekijken van de afgelopen week qua dosissen
 - [ ] Een graph bekijken hiervan (enhancement?)
+
+## Progressive Enhancement
+Everthing concerning research on Progressive Enhancement, is stated in the [wiki](https://github.com/deannabosschert/browser-technologies-1920/wiki/research)
+
+## 👁️ Accessibility guidelines
+Everything concerning the accessibility guidelines, is stated in the [wiki](https://github.com/deannabosschert/browser-technologies-1920/wiki/research#accessibility).
 
 ## 🏫 Assignment
 <details>
