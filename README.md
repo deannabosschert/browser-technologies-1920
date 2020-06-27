@@ -1,9 +1,7 @@
 # Class of 2020
 ## Browser Technologies @cmda-minor-web 1920
 
-https://browsertechnologies.netlify.com
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e56a09e1-89a2-48f3-bd77-6247d77caa09/deploy-status)](https://app.netlify.com/sites/browsertechnologies/deploys)
+https://medi-track.herokuapp.com/
 
 <details>
   <summary><strong>Table of Contents</strong> (click to expand)</summary>
