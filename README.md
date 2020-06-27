@@ -11,25 +11,17 @@ https://medi-track.herokuapp.com/
 - [✅ To-do](#--to-do)
 - [📋 Concept](#---concept)
 - [⚙️ Installation](#---installation)
-    + [Helpers](#helpers)
-- [🧑🏼‍ Actor Diagram](#------actor-diagram)
-- [↔️ Interaction diagram](#---interaction-diagram)
-- [🌍 Design patterns](#---design-patterns)
+    + [Helpers/dependencies](#helpers-dependencies)
+    + [🗃 Tech(stack)](#---tech-stack-)
 - [👍🏽 Best practices](#-----best-practices)
-- [🗃 Data](#---data)
-  * [🐒 Github API](#---github-api)
-    + [Properties](#properties)
-    + [Rate limiting](#rate-limiting)
   * [💽 Data cleaning](#---data-cleaning)
-    + [Filtering the data using array.filter](#filtering-the-data-using-arrayfilter)
-    + [Rendering the data to html-representation using array.map](#rendering-the-data-to-html-representation-using-arraymap)
 - [👯🏿‍ Features (+ wishlist)](#------features----wishlist-)
+- [Progressive Enhancement](#progressive-enhancement)
+- [👁️ Accessibility guidelines](#----accessibility-guidelines)
 - [🏫 Assignment](#---assignment)
-  * [Learning goals](#learning-goals)
-  * [Week 1 - Server Side Rendering 📡](#week-1---server-side-rendering---)
-  * [Week 2 - Progressive Web App 🚀](#week-2---progressive-web-app---)
-  * [Week 3 - Critical Rendering Path 📉](#week-3---critical-rendering-path---)
-  * [Rubric](#rubric)
+- [Learning goals](#learning-goals)
+- [Planning](#planning)
+  * [[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSc48v1nrjcwH0llcTd68xyK7f2fDC2UL4d6h4ZNW3DU8ucez6ZOHiId1XSX0RP5ByvLC8p5pVUGZT4/pubhtml)](#-rubric--https---docsgooglecom-spreadsheets-d-e-2pacx-1vsc48v1nrjcwh0llctd68xyk7f2fdc2ul4d6h4znw3du8ucez6zohiid1xsx0rp5byvlc8p5pvugzt4-pubhtml-)
 - [ℹ️ Resources](#---resources)
   * [Credits](#credits)
   * [Small inspiration sources](#small-inspiration-sources)
@@ -40,7 +32,7 @@ https://medi-track.herokuapp.com/
 </details>
 
 ## ✅ To-do
-
+- [ ] Test on different browsers and devices
 
 
 ## 📋 Concept
