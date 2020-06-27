@@ -25,16 +25,20 @@ open accordion 24px roboto 500 8px line height
 */
 @font-face {
   font-family: "AbrilFatface";
-  src: url('/fonts/AbrilFatface-Regular.ttf');
+  src: local("AbrilFatface-Regular"),
+       local("AbrilFatfaceRegular"),
+       local("AbrilFatface"),
+       url(./fonts/AbrilFatface-Regular.ttf) format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Thin.ttf');
+  src: local("Roboto-Thin"),
+       local("RobotoThin"),
+       url(./fonts/Roboto-Thin.ttf);
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -42,7 +46,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-ThinItalic.ttf');
+  src: local("Roboto-ThinItalic"),
+       local("RobotoThinItalic"),
+       url(./fonts/Roboto-ThinItalic.ttf);
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -50,7 +56,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Light.ttf');
+  src: local("Roboto-Light"),
+       local("RobotoLight"),
+       url(./fonts/Roboto-Light.ttf);
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -58,7 +66,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-LightItalic.ttf');
+  src: local("Roboto-LightItalic"),
+       local("RobotoLightItalic"),
+       url(./fonts/Roboto-LightItalic.ttf);
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -66,7 +76,10 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Regular.ttf');
+  src: local("Roboto-Regular"),
+       local("RobotoRegular"),
+       local("Roboto"),
+       url(./fonts/Roboto-Regular.ttf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -74,7 +87,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Italic.ttf');
+  src: local("Roboto-Italic"),
+       local("RobotoItalic"),
+       url(./fonts/Roboto-Italic.ttf);
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -83,6 +98,9 @@ open accordion 24px roboto 500 8px line height
 @font-face {
   font-family: "Roboto";
   src: url('/fonts/Roboto-Medium.ttf');
+  src: local("Roboto-Medium"),
+       local("RobotoMedium"),
+       url(./fonts/Roboto-Medium.ttf);
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -90,7 +108,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-MediumItalic.ttf');
+  src: local("Roboto-MediumItalic"),
+       local("RobotoMediumItalic"),
+       url(./fonts/Roboto-MediumItalic.ttf);
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -98,7 +118,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Bold.ttf');
+  src: local("Roboto-Bold"),
+       local("RobotoBold"),
+       url(./fonts/Roboto-Bold.ttf);
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -106,7 +128,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-BoldItalic.ttf');
+  src: local("Roboto-BoldItalic"),
+       local("RobotoBoldItalic"),
+       url(./fonts/Roboto-BoldItalic.ttf);
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -114,7 +138,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Black.ttf');
+  src: local("Roboto-Black"),
+       local("RobotoBlack"),
+       url(./fonts/Roboto-Black.ttf);
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -122,7 +148,9 @@ open accordion 24px roboto 500 8px line height
 
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-BlackItalic.ttf');
+  src: local("Roboto-BlackItalic"),
+       local("RobotoBlackItalic"),
+       url(./fonts/Roboto-BlackItalic.ttf);
   font-weight: 900;
   font-style: italic;
   font-display: swap;

@@ -12,9 +12,8 @@ app.use(bodyParser.urlencoded({
     extended: true
   }))
   .set('view engine', 'ejs')
-  .use(express.static('src'))
+  .use(express.static(__dirname + '/public'))
   .post('/add', addDose)
-  .post('/add', removeDose)
   .get('/', overview)
   .listen(port, () => {
     console.log(`App listening on port ${port}!`)
