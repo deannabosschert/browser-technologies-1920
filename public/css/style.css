@@ -90,9 +90,6 @@ h1 {
 }
 
 
-
-
-
 h2 {
 color: #8492A6;
 font-family: var(--font-body);
@@ -164,4 +161,9 @@ tr: nth-child(2n) {
 tr: nth-child(3n) {
   background-color: var(--table3);
   /* border:  0.5px solid #C0CCDA; */
+}
+
+
+.hidden {
+  display: none;
 }
