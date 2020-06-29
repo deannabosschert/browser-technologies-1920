@@ -65,7 +65,7 @@ if (storageAvailable('localStorage')) {
   // tablesElement.innerHTML = doseTablesSave.innerHTML
 
 } else {
-  console.log('Too bad, no localStorage for us'
+  console.log('Too bad, no localStorage for us')
 }
 
 
@@ -94,5 +94,3 @@ function storageAvailable(type) {
   }
 }
 jsAvailable()
-
-document.getElementById('date').valueAsDate = new Date();
