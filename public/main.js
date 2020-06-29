@@ -94,3 +94,5 @@ function storageAvailable(type) {
   }
 }
 jsAvailable()
+
+document.getElementById('date').valueAsDate = new Date();
