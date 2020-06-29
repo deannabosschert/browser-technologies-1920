@@ -18,7 +18,7 @@ https://medi-track.herokuapp.com/
 - [🏫 Assignment](#---assignment)
 - [Learning goals](#learning-goals)
 - [Planning](#planning)
-  * [[Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/edit#gid=0)](#-rubric--https---docsgooglecom-spreadsheets-d-1mv3bwwwg-zz1n-s-qom4ism4ga4m6g0xaxgacyapuac-edit-gid-0-)
+  * [[Rubric](https://github.com/deannabosschert/browser-technologies-1920)
 - [ℹ️ Resources](#---resources)
   * [Credits](#credits)
   * [Small inspiration sources](#small-inspiration-sources)
