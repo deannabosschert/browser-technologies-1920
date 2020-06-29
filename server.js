@@ -70,7 +70,7 @@ function cleanData() {
 
 function createTable(dose) {
   return `
-          <p>${dose.day}</p>
+          <h3>${dose.day}</h3>
           <table class="table">
               ${dose.medicin.map(medicin => {
                   return `

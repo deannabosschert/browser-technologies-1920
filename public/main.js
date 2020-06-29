@@ -65,12 +65,7 @@ if (storageAvailable('localStorage')) {
   // tablesElement.innerHTML = doseTablesSave.innerHTML
 
 } else {
-  console.log('Too bad, no localStorage for us')
-
-  // when there's no localstorage, show the save button
-  // var saveButton = document.querySelector('#save')
-  // saveButton.style.display = 'block'
-
+  console.log('Too bad, no localStorage for us'
 }
 
 

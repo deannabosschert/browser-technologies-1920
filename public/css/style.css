@@ -2,168 +2,269 @@
 @import 'fonts.css';
 
 /* BASE */
-:root {
-  --white: #FFFFFF;
-  --dark: #131C26;
-  --h1Blue: #1F2D3D;
-  --h2BlueLight: #485b69;
-  --textBlue: #1F2D3D;
-  --table1: #EFF2F7;
-  --table2: #FFFFFF;
-  --table3: #F9FAFC;
-  --borderDark: #C0CCDA;
-  /* --fonth1:  32.5px; // meditrack en new dose
-  --fonth2:  24px; //today this week previous, en normale tekst en addbutton
-  --fonth3:  21px; //wednesday 18 march enzo en labels
-  --fonth4:  18px; // labels en 'januari binnen previous' */
-  --fonth1: 32.5px;
-  --fonth2: 24px;
-  --fonth3: 21px;
-  --fonth4: 18px;
-  --fontWeight_1:  100;
-  --fontWeight_2:  200;
-  --fontWeight_3:  300;
-  --fontWeight_4:  400;
-  --fontWeight_5:  500;
-  --fontWeight_6:  600;
-  --fontWeight_7:  700;
-  --fontWeight_8:  800;
-  --fontWeight_9:  900;
-  --lineHeight_31: 31px;
-  --lineHeight_27: 27px;
-  --lineHeight_8: 8px;
-  --spacing-15: 15px;
-  --font-logo: "AbrilFatface", "Palatino Linotype", Georgia, "Times New Roman", serif;
-  --font-body: "Roboto", Tahoma, Helvetica, Arial, sans-serif;
-
-}
-
-
-/* td {
-  color: #1F2D3D;
-  font-family: var(--font-body);
-  font-size: var(--fonth2);
-  font-weight: var(--fontWeight_4);
-  line-height: var(----lineHeight_31);
-  text-align: left;
-} */
-
 body {
-  /* background:  rgb(236, 236, 255);
-  background:  linear-gradient(90deg, rgba(236, 236, 255, 1) 0%, rgba(240, 250, 255, 1) 100%);
-  font-family:  sans-serif; */
-  /* display:  flex; */
-  /* align-content:  center; */
-}
-
-.editIcon {
-  color: #3B4859;
-  width: 32px;
-  height: 32px;
-}
-
-.header {
-  background-color: #1E2D3E;
-  width: 540px;
-  height: 65px;
+  font-family: "Roboto", Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  color: black;
+  background: rgb(236, 236, 255);
+  /* if the browser supports linear-gradient, the cascade will use the following: */
+  background: -webkit-linear-gradient(left, rgba(252, 252, 255, 1) 0%, rgba(245, 251, 255, 1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(252, 252, 255, 1) 0%, rgba(245, 251, 255, 1) 100%);
+  background: -o-linear-gradient(left, rgba(252, 252, 255, 1) 0%, rgba(245, 251, 255, 1) 100%);
+  background: linear-gradient(to right, rgba(252, 252, 255, 1) 0%, rgba(245, 251, 255, 1) 100%);
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(left, #fcfcff, #f5fbff);
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(left, #fcfcff, #f5fbff);
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient(left, #fcfcff, #f5fbff);
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:
+    linear-gradient(to right, #fcfcff, #f5fbff);
+  max-width: 100vw;
 }
 
 h1 {
-  font-size: var(--fonth2);
-  font-family: var(--font-body);
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-family: "AbrilFatface", "Palatino Linotype", Georgia, "Times New Roman", serif;
   font-weight: 700;
   line-height: 31px;
-  text-align: left;
-  width: 230px;
-  color: #1F2D3D;
-
-}
-
-.header h1 {
-  font-family:  var(--font-logo);
-  font-size:  var(--fonth1);
-  color: var(--white);
+  line-height: 1.8rem;
+  color: white;
   text-align: center;
-  width: 540px;
-  padding-top: 15px;
-  /* line-height: 8px; */
+  padding: 15px;
+  padding: 1rem;
+  letter-spacing: 3.5px;
 }
-
 
 h2 {
-color: var(--h2BlueLight);
-font-family: var(--font-body);
-font-size: 21px;
-font-weight: 400;
-line-height: 27px;
-width: 225.5px;
-text-align: left;
+  color: #485b69;
+  font-size: 29px;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 27px;
+  line-height: 2.2rem;
+  text-align: left;
+  padding-bottom: 0.7rem;
+  border-bottom: 3px solid #3B4859;
+  min-width: 280px;
+  max-width: 60vw;
 }
 
 h3 {
-  font-size: var(--fonth3);
-}
-
-p, td {
-  color: #1F2D3D;
-  font-family: var(--font-body);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 31px;
-  width: 173.59px;
-  text-align: left;
+  font-size: 28.8px;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  margin-top: 1.3rem;
 }
 
 h4 {
-  font-size: var(--fonth4)
+  font-size: 28.8px;
+  font-size: 1.6rem;
 }
 
-main {
-  /* background-color:  light purple; */
+p, td {
+  font-weight: 400;
+  line-height: 31px;
+  color: #1F2D3D;
+  text-align: left;
 }
 
-article {
-  margin-top: 50px;
-  margin-bottom: 50px;
+td {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 21px;
+  font-size: 1.2rem;
+}
+
+main {}
+
+header {
+  min-height: 2.7rem;
+  max-height: 15vh;
+  padding: 0.5rem;
+  background-color: #1E2D3E;
+  display: block;
 }
 
 section {
-  margin-left: 28px;
+  margin-left: 16px;
   margin-right: 28px;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+article {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+form {
+  padding: 2rem;
+  min-height: 22rem;
+  /* max-height: 28rem; */
+  min-width: 300px;
+  max-width: 60vw;
+}
+
+form input {
+  font-size: 20.8px;
+  font-size: 1.5rem;
+}
+
+form label {
+  padding: 6px;
+  padding: 0.35rem;
+  margin-top: 17.6px;
+  margin-top: 1.3rem;
+  font-size: 16px;
+  font-size: 1.2rem;
+}
+
+button {
+  min-width: 25vw;
+  max-width: 40%;
+  padding: 8px;
+  padding: 0.8rem;
+  margin: 4px;
+  margin: 0.5rem;
+  background-color: #1E2D3E;
+  color: white;
+  font-weight: bold;
+  font-size: 20.8px;
+  font-size: 1.1rem;
+  display: block;
+  margin-top: 1rem;
+}
+
+.ingevoerde-dosissen {
+  padding: 2rem;
+  min-width: 300px;
+  max-width: 60vw;
+}
+
+/* LAYOUT */
+@supports (display: flexx) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    display: block;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {}
+
+  .invoer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ingevoerde-dosissen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .load-doses {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.load-doses {
+  min-width: 300px;
+  max-width: 80vw;
+  padding: 1rem;
+}
+
+.load-doses p {
+  min-width: 330px;
+  max-width: 70%;
+  margin-left: 0.2rem;
+  margin-top: 0.5rem;
+
+}
+
+.load-doses button {
+  margin-left: 1rem;
+}
+
+.invoer {
+  /* margin-bottom: 5rem; */
+}
+
+
+.ingevoerde-dosissen {
+  /* max-width: 80vw; */
 }
 
 .table {
-  width: 485px;
-  height: 57px;
   border-left: 0.1px solid #C0CCDA;
   border-right: 0.1px solid #C0CCDA;
   border-collapse: collapse;
 }
 
+/* CONTENT */
 .table td {
   text-align: left;
   border: 0.1px solid #C0CCDA;
   border-left: 0;
   border-right: 0;
-  padding: var(--spacing-15);
+  padding: 15px;
 }
 
 tr: nth-child(1n) {
-  background-color: var(--table1);
-  /* border:  0.5px solid #C0CCDA; */
+  background-color: #EFF2F7;
 }
 
 tr: nth-child(2n) {
-  background-color: var(--table2);
-  /* border:  0.5px solid #C0CCDA; */
+  background-color: white;
 }
 
 tr: nth-child(3n) {
-  background-color: var(--table3);
-  /* border:  0.5px solid #C0CCDA; */
+  background-color: #F9FAFC;
 }
 
+/* COMPONENTS */
+.editIcon {
+  color: #3B4859;
+  width: 32px;
+  height: 32px;
+  max-width: 2rem;
+  max-height: 2rem;
+}
 
+/* EXTRA */
 .hidden {
   display: none;
 }
