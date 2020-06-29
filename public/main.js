@@ -96,3 +96,7 @@ function storageAvailable(type) {
 jsAvailable()
 
 document.getElementById('datePicker').valueAsDate = new Date();
+
+var date = new Date();
+var currentTime = date.getHours() + ':' + date.getMinutes();
+document.getElementById('currentTime').value = currentTime;
