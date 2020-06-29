@@ -3,13 +3,20 @@
 <%- include('./partials/header.ejs') %>
 
 <main>
-  <section>
+  <section class="load-doses">
+    <h2>Laad vorige dosissen (optioneel)</h2>
+    <p>Weet je zeker dat je al eens dosissen hebt ingevoerd, maar kun ze je hieronder niet zien? Klik dan op de button 'laad vorige dosissen' hieronder om ze in te laden.</p>
+    <button id="load">laad vorige dosissen</button>
+  </section>
+  <section class="invoer">
     <form autocomplete="off">
-      <h2>Invoeren</h2>
-      <label class="textInput" for="name">Medicijnnaam
+      <h2>Voer nieuwe dosis in</h2>
+      <label class="textInput" for="name">
+        <h3>Medicijnnaam</h3>
         <input type="text" name="name" placeholder="Modafinil" required value="Modafinil">
       </label>
-      <label class="numberInput" for="amount">Hoeveelheid
+      <label class="numberInput" for="amount">
+        <h3>Hoeveelheid</h3>
         <input type="number" name="amount" placeholder="100" value="100" required>
         <input list="unit" name="unit" placeholder="mg" value="mg" />
         <datalist id="unit">
@@ -18,23 +25,24 @@
           <option value="g">
         </datalist>
       </label>
-      <label for="date">Date
-        <input type="date" name="date" min="2020-06-01" max="2020-12-24" value="2020-06-02"></label>
-      <label class="timeInput" for="time">Om welke tijd?
-        <input type="time" name="time" value="13:12" required>
+      <label for="date">
+        <h3>Datum</h3>
+        <input type="date" name="date" value="2020-06-29">
       </label>
-
-      <!-- <button id="remove" type="submit" formaction="/remove" formmethod="post">remove</button> -->
-      <button id="add" type="submit" formaction="/add" formmethod="post">add</button>
-      <button id="load">load things</button>
-
+      <label class="timeInput" for="time">
+        <h3>Om welke tijd?</h3>
+        <input type="time" name="time" required>
+      </label>
+        <!-- <button id="remove" type="submit" formaction="/remove" formmethod="post">remove</button> -->
+        <button id="add" type="submit" formaction="/add" formmethod="post">voeg nieuwe dosis toe</button>
       <!-- // doe iets met eerst een submitten en dan een save to ls -->
     </form>
   </section>
-  <section id="tablesElement">
+  <section class="ingevoerde-dosissen" id="tablesElement">
+    <h2>Ingevoerde dosissen</h2>
     <% if (doseTables) { %>
     <% doseTables.forEach(function(doseTable) { %>
-    <article>
+    <article class="dose_table">
       <%- doseTable %>
     </article>
     <% }) %>
