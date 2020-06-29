@@ -3,8 +3,7 @@
 
 https://medi-track.herokuapp.com/
 
-<details>
-  <summary><strong>Table of Contents</strong> (click to expand)</summary>
+## Table of Contents
 
 <!-- toc -->
 
@@ -13,7 +12,6 @@ https://medi-track.herokuapp.com/
 - [⚙️ Installation](#---installation)
     + [Helpers/dependencies](#helpers-dependencies)
     + [🗃 Tech(stack)](#---tech-stack-)
-- [👍🏽 Best practices](#-----best-practices)
   * [💽 Data cleaning](#---data-cleaning)
 - [👯🏿‍ Features (+ wishlist)](#------features----wishlist-)
 - [Progressive Enhancement](#progressive-enhancement)
@@ -21,15 +19,13 @@ https://medi-track.herokuapp.com/
 - [🏫 Assignment](#---assignment)
 - [Learning goals](#learning-goals)
 - [Planning](#planning)
-  * [[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSc48v1nrjcwH0llcTd68xyK7f2fDC2UL4d6h4ZNW3DU8ucez6ZOHiId1XSX0RP5ByvLC8p5pVUGZT4/pubhtml)](#-rubric--https---docsgooglecom-spreadsheets-d-e-2pacx-1vsc48v1nrjcwh0llctd68xyk7f2fdc2ul4d6h4znw3du8ucez6zohiid1xsx0rp5byvlc8p5pvugzt4-pubhtml-)
+  * [[Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/edit#gid=0)](#-rubric--https---docsgooglecom-spreadsheets-d-1mv3bwwwg-zz1n-s-qom4ism4ga4m6g0xaxgacyapuac-edit-gid-0-)
 - [ℹ️ Resources](#---resources)
   * [Credits](#credits)
   * [Small inspiration sources](#small-inspiration-sources)
 - [🗺️ License](#----license)
 
 <!-- tocstop -->
-
-</details>
 
 ## ✅ To-do
 - [ ] Test on different browsers and devices
