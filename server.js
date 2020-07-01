@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({
   .set('view engine', 'ejs')
   .use(express.static(__dirname + '/public'))
   .post('/add', addDose)
+  .get('/add', renderDose)
   .get('/', overview)
   .listen(port, () => {
     console.log(`App listening on port ${port}!`)
@@ -36,9 +37,13 @@ function addDose(req, res) {
 
   const totalRawDoses = rawDoses.push(rawDose)
   cleanData()
-  res.redirect('/')
+  res.status(204)
+  res.end()
 }
 
+function renderDose (req, res) {
+  res.send(doseTables)
+}
 
 function removeDose(req, res) {
   // check of ie nog local in doses staat, zoja daaruit deleten

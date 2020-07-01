@@ -9,7 +9,7 @@
     <button id="load">laad vorige dosissen</button>
   </section>
   <section class="invoer">
-    <form autocomplete="off">
+    <form id="formulier" autocomplete="off">
       <h2>Voer nieuwe dosis in</h2>
       <label class="textInput" for="name">
         <h3>Medicijnnaam</h3>
@@ -33,19 +33,21 @@
         <h3>Om welke tijd?</h3>
         <input type="time" name="time" id="currentTime" required>
       </label>
-        <!-- <button id="remove" type="submit" formaction="/remove" formmethod="post">remove</button> -->
-        <button id="add" type="submit" formaction="/add" formmethod="post">voeg nieuwe dosis toe</button>
+      <!-- <button id="remove" type="submit" formaction="/remove" formmethod="post">remove</button> -->
+      <button id="add" type="submit" formaction="/add" formmethod="post">voeg nieuwe dosis toe</button>
       <!-- // doe iets met eerst een submitten en dan een save to ls -->
     </form>
   </section>
   <section class="ingevoerde-dosissen" id="tablesElement">
     <h2>Ingevoerde dosissen</h2>
     <% if (doseTables) { %>
-    <% doseTables.forEach(function(doseTable) { %>
-    <article class="dose_table">
-      <%- doseTable %>
-    </article>
-    <% }) %>
+    <div id="doseTables_container">
+      <% doseTables.forEach(function(doseTable) { %>
+      <article class="dose_table">
+        <%- doseTable %>
+      </article>
+      <% }) %>
+    </div>
     <% } %>
 
   </section>

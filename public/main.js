@@ -4,6 +4,49 @@ var date = new Date();
 var currentTime = date.getHours() + ':' + date.getMinutes();
 document.getElementById('currentTime').value = currentTime;
 
+
+// ID is ouder, wordt beter ondersteund
+var doseTables_container = document.getElementById('doseTables_container')
+var formulier = document.getElementById('formulier')
+
+console.log('yeet')
+console.log(doseTables_container)
+
+formulier.addEventListener('submit', stuur)
+function stuur(event) {
+  event.preventDefault()
+console.log('hoi')
+
+fetch('/add', { method: POST}).then(response => response.text()).then(console.log)
+}
+// doseTables_container.innerHTML=""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // source: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 function jsAvailable() {
   storageAvailable()
