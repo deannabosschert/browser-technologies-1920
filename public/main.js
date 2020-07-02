@@ -9,15 +9,10 @@ document.getElementById('currentTime').value = currentTime;
 var doseTables_container = document.getElementById('doseTables_container')
 var formulier = document.getElementById('formulier')
 
-
-console.log('yeet')
-console.log(doseTables_container)
-
 formulier.addEventListener('submit', stuur)
 
 function stuur(event) {
   event.preventDefault()
-  console.log('hoi')
   //
   // const options = {
   //   method: 'POST',
@@ -38,7 +33,6 @@ function stuur(event) {
 //       })
 //   }
 // }
-// doseTables_container.innerHTML=""
 
 // console.log(name: req.body.name)
 var inputs = formulier.querySelectorAll('input')
@@ -47,28 +41,16 @@ var inputValues = Array.from(inputs).reduce((values, currentInput) => {
   return values
 }, {})
 
-console.log(inputValues)
-const yes = {
-    name: inputValues.name,
-    amount: inputValues.amount,
-    unit: inputValues.unit,
-    time: inputValues.time,
-    date: inputValues.date
-}
-// const test = JSON.stringify([inputValues])
-console.log(yes)
-
   postData('/add', inputValues)
     .then(data => {
       console.log('dataloggen')
-      console.log(data); // JSON data parsed by `data.json()` call
+      console.log(data); // hier komt de gecleande data vanuit de server weer binnen!
+      doseTables_container.innerHTML = data
     });
 }
 
   // Example POST method implementation:
   async function postData(url = '', data) {
-    console.log('henkuitvoeren')
-    console.log(data)
     // Default options are marked with *
     const response = await fetch(url, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
