@@ -33,7 +33,7 @@ function addDose(req, res) {
     }
   })
   const reqJson = getData[0].reqData
-  const rawDose = JSON.parse(reqJson);  
+  const rawDose = JSON.parse(reqJson);
   const totalRawDoses = rawDoses.push(rawDose)
   const tables = cleanData()
   res.status(200)
@@ -83,7 +83,6 @@ function createTable(dose) {
                       <td>${medicin.name}</td>
                       <td>${medicin.amount}</td>
                       <td>${medicin.unit}</td>
-                      <td><img class="editIcon" src="./img/icons/icon_pencil.png" alt="edit"></td>
                       </tr>
                   `
               }).join('')}
