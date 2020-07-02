@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({
   .set('view engine', 'ejs')
   .use(express.static(__dirname + '/public'))
   .post('/add', addDose)
+  .post('/add', cleanOldData)
   .get('/', overview)
   .listen(port, () => {
     console.log(`App listening on port ${port}!`)
@@ -33,14 +34,44 @@ function addDose(req, res) {
     }
   })
   const reqJson = getData[0].reqData
-  const rawDose = JSON.parse(reqJson);  
-  const totalRawDoses = rawDoses.push(rawDose)
+  const parsedDoses = JSON.parse(reqJson)
+  const newDose = parsedDoses.inputValues
+
+  const oldDoses = parsedDoses.currentDoses
+  const oldTables = [oldDoses.currentDoseTables]
+  // console.log(oldTables)
+
+  console.log('teeeeest')
+  console.log(newDose)
+  console.log(rawDoses)
+
+  const totalRawDoses = rawDoses.push(newDose)
   const tables = cleanData()
+  const tablesAndDoses = [tables, rawDoses]
   res.status(200)
-  console.log(tables)
-  res.send(tables)
+  res.send(tablesAndDoses)
 }
 
+function cleanOldData(req, res) {
+  const getData = Object.entries(req.body).map(([key, value]) => {
+    return {
+      reqData: key,
+      niets: value
+    }
+  })
+  const reqJson = getData[0].reqData
+  const parsedDoses = JSON.parse(reqJson)
+  // const newDose = parsedDoses.inputValues
+
+  // const oldDoses = parsedDoses.currentDoses
+  // const oldTables = [oldDoses.currentDoseTables]
+  // console.log(oldTables)
+  console.log('cleandatatesting')
+  console.log(parsedDoses)
+  const tables = cleanData()
+  res.status(200)
+  res.send(tables)
+}
 
 function removeDose(req, res) {
   // check of ie nog local in doses staat, zoja daaruit deleten

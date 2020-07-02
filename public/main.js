@@ -13,19 +13,27 @@ formulier.addEventListener('submit', sendFormData)
 
 function sendFormData(event) {
   event.preventDefault()
+  const currentDoses = {
+    currentDoseTables: doseTables_container.innerHTML
+  }
   var inputs = formulier.querySelectorAll('input')
   var inputValues = Array.from(inputs).reduce((values, currentInput) => {
     values[currentInput.name] = currentInput.value
     return values
   }, {})
 
-  postData('/add', inputValues)
-    .then(data => { // hier komt de gecleande data vanuit de server weer binnen!
-      doseTables_container.innerHTML = data
-      return data
+  const newAndCurrent = {inputValues, currentDoses}
+  console.log(newAndCurrent)
+
+  postData('/add', newAndCurrent)
+    .then(tablesAndDoses => { // hier komt de gecleande data vanuit de server weer binnen!
+      const tables = tablesAndDoses[0]
+      const doses = tablesAndDoses[1]
+      doseTables_container.innerHTML = tables
+      return doses
     })
-    .then(data => {
-      tablesToLocalStorage(data)
+    .then(doses => {
+      tablesToLocalStorage(doses)
     })
 }
 
@@ -69,8 +77,17 @@ if (storageAvailable('localStorage')) {
     console.log("er zit data in je localStorage 🤓")
     // loadButton.addEventListener('click', function() {   enable this part to have reload of data from LS on button click instead of on page loading
     var savedTables = localStorage.getItem("tables")
-    doseTables_container.innerHTML = savedTables
-    // })
+    var savedTablesObj = {
+      savedTables: savedTables
+    }
+
+    postData('/cleanOldData', savedTables)
+      .then(tables => { // hier komt de gecleande data vanuit de server weer binnen!
+        doseTables_container.innerHTML = tables
+        return
+      })
+
+    //
   }
 } else {
   console.log('Too bad, no localStorage for us')
