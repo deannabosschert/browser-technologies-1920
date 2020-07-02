@@ -9,38 +9,83 @@ document.getElementById('currentTime').value = currentTime;
 var doseTables_container = document.getElementById('doseTables_container')
 var formulier = document.getElementById('formulier')
 
+
 console.log('yeet')
 console.log(doseTables_container)
 
 formulier.addEventListener('submit', stuur)
+
 function stuur(event) {
   event.preventDefault()
-console.log('hoi')
-
-fetch('/add', { method: POST}).then(response => response.text()).then(console.log)
-}
+  console.log('hoi')
+  //
+  // const options = {
+  //   method: 'POST',
+  //   body: {
+  //     name: inputValues.name,
+  //     amount: inputValues.amount,
+  //     unit: inputValues.unit,
+  //     time: inputValues.time,
+  //     date: inputValues.date
+  //   }
+  // }
+//
+//
+//   fetch('/add', options)
+//       .then(res => res.text())
+//       .then(data => {
+//         console.log(data)
+//       })
+//   }
+// }
 // doseTables_container.innerHTML=""
 
+// console.log(name: req.body.name)
+var inputs = formulier.querySelectorAll('input')
+var inputValues = Array.from(inputs).reduce((values, currentInput) => {
+  values[currentInput.name] = currentInput.value
+  return values
+}, {})
 
+console.log(inputValues)
+const yes = {
+    name: inputValues.name,
+    amount: inputValues.amount,
+    unit: inputValues.unit,
+    time: inputValues.time,
+    date: inputValues.date
+}
+// const test = JSON.stringify([inputValues])
+console.log(yes)
 
+  postData('/add', inputValues)
+    .then(data => {
+      console.log('dataloggen')
+      console.log(data); // JSON data parsed by `data.json()` call
+    });
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Example POST method implementation:
+  async function postData(url = '', data) {
+    console.log('henkuitvoeren')
+    console.log(data)
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        // 'Content-Type': 'application/json'
+        // 'Content-Type': 'application/multipart/form-data'
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
 
 
 
