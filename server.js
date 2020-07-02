@@ -33,30 +33,8 @@ function addDose(req, res) {
     }
   })
   const reqJson = getData[0].reqData
-  const rawDose = JSON.parse(reqJson);
-  console.log(rawDose)
-  // // console.log(rawDose.value)
-  // // console.log('dit is je cleanedreq:')
-  // const dingendoen2 = Object.entries(rawDose.json()).map((key, value) => {
-  //   return value
-  // })
-  // console.log(dingendoen2)
-
-//
-// for (const [key] of Object.entries(rawDose)) {
-//   console.log(`${key}`);
-// }
-
-// for (let value of Object.values(rawDose)) {
-//   console.log(value); // John, then 30
-// }
-
-  // const naaam = "name"
-  // console.log(rawDose.naaam)
-
-  // console.log(dingendoen2)
+  const rawDose = JSON.parse(reqJson);  
   const totalRawDoses = rawDoses.push(rawDose)
-  console.log(totalRawDoses)
   const tables = cleanData()
   res.status(200)
   console.log(tables)
