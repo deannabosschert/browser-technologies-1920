@@ -2,15 +2,16 @@ document.getElementById('datePicker').valueAsDate = new Date();
 
 var date = new Date();
 var currentTime = date.getHours() + ':' + date.getMinutes();
+var loadButton = document.getElementById('load')
 document.getElementById('currentTime').value = currentTime;
 
-// ID is ouder, wordt beter ondersteund
+// getElementById is ouder, wordt beter ondersteund
 var doseTables_container = document.getElementById('doseTables_container')
 var formulier = document.getElementById('formulier')
 
-formulier.addEventListener('submit', stuur)
+formulier.addEventListener('submit', sendFormData)
 
-function stuur(event) {
+function sendFormData(event) {
   event.preventDefault()
   var inputs = formulier.querySelectorAll('input')
   var inputValues = Array.from(inputs).reduce((values, currentInput) => {
@@ -28,7 +29,7 @@ function stuur(event) {
     })
 }
 
-// Example POST method implementation:
+// POST method implementation from MDN, modified. source: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function postData(url = '', data) {
   // Default options are marked with *
   const response = await fetch(url, {
@@ -37,8 +38,6 @@ async function postData(url = '', data) {
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'same-origin', // include, *same-origin, omit
     headers: {
-      // 'Content-Type': 'application/json'
-      // 'Content-Type': 'application/multipart/form-data'
       'Content-Type': 'application/x-www-form-urlencoded'
     },
     redirect: 'follow', // manual, *follow, error
@@ -48,11 +47,6 @@ async function postData(url = '', data) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-
-
-
-
-
 // source: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 function jsAvailable() {
   storageAvailable()
@@ -60,11 +54,10 @@ function jsAvailable() {
 
 if (storageAvailable('localStorage')) {
   console.log('Yay! We can use localStorage')
-  var loadButton = document.querySelector('#load')
-
   if (doseTables_container.innerHTML == 0) {
     console.log("(nog) geen data te zien")
   }
+
   function tablesToLocalStorage(data) {
     console.log("set tables")
     localStorage.setItem("tables", data)
@@ -74,10 +67,10 @@ if (storageAvailable('localStorage')) {
     console.log("niets in je storage")
   } else {
     console.log("er zit data in je localStorage 🤓")
-    loadButton.addEventListener('click', function() {
-      var savedTables = localStorage.getItem("tables")
-      doseTables_container.innerHTML = savedTables
-    })
+    // loadButton.addEventListener('click', function() {   enable this part to have reload of data from LS on button click instead of on page loading
+    var savedTables = localStorage.getItem("tables")
+    doseTables_container.innerHTML = savedTables
+    // })
   }
 } else {
   console.log('Too bad, no localStorage for us')
