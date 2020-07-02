@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({
   .set('view engine', 'ejs')
   .use(express.static(__dirname + '/public'))
   .post('/add', addDose)
-  .get('/add', renderDose)
   .get('/', overview)
   .listen(port, () => {
     console.log(`App listening on port ${port}!`)
@@ -27,23 +26,21 @@ function overview(req, res) {
 }
 
 function addDose(req, res) {
-  const rawDose = {
-    name: req.body.name,
-    amount: req.body.amount,
-    unit: req.body.unit,
-    time: req.body.time,
-    date: req.body.date
-  }
-
+  const getData = Object.entries(req.body).map(([key, value]) => {
+    return {
+      reqData: key,
+      niets: value
+    }
+  })
+  const reqJson = getData[0].reqData
+  const rawDose = JSON.parse(reqJson);  
   const totalRawDoses = rawDoses.push(rawDose)
-  cleanData()
-  res.status(204)
-  res.end()
+  const tables = cleanData()
+  res.status(200)
+  console.log(tables)
+  res.send(tables)
 }
 
-function renderDose (req, res) {
-  res.send(doseTables)
-}
 
 function removeDose(req, res) {
   // check of ie nog local in doses staat, zoja daaruit deleten
@@ -71,6 +68,8 @@ function cleanData() {
     const totals = doseTables.push(markup)
     return
   })
+
+  return doseTables
 }
 
 function createTable(dose) {
