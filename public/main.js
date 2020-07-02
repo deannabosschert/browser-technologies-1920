@@ -4,7 +4,6 @@ var date = new Date();
 var currentTime = date.getHours() + ':' + date.getMinutes();
 document.getElementById('currentTime').value = currentTime;
 
-
 // ID is ouder, wordt beter ondersteund
 var doseTables_container = document.getElementById('doseTables_container')
 var formulier = document.getElementById('formulier')
@@ -13,61 +12,41 @@ formulier.addEventListener('submit', stuur)
 
 function stuur(event) {
   event.preventDefault()
-  //
-  // const options = {
-  //   method: 'POST',
-  //   body: {
-  //     name: inputValues.name,
-  //     amount: inputValues.amount,
-  //     unit: inputValues.unit,
-  //     time: inputValues.time,
-  //     date: inputValues.date
-  //   }
-  // }
-//
-//
-//   fetch('/add', options)
-//       .then(res => res.text())
-//       .then(data => {
-//         console.log(data)
-//       })
-//   }
-// }
-
-// console.log(name: req.body.name)
-var inputs = formulier.querySelectorAll('input')
-var inputValues = Array.from(inputs).reduce((values, currentInput) => {
-  values[currentInput.name] = currentInput.value
-  return values
-}, {})
+  var inputs = formulier.querySelectorAll('input')
+  var inputValues = Array.from(inputs).reduce((values, currentInput) => {
+    values[currentInput.name] = currentInput.value
+    return values
+  }, {})
 
   postData('/add', inputValues)
-    .then(data => {
-      console.log('dataloggen')
-      console.log(data); // hier komt de gecleande data vanuit de server weer binnen!
+    .then(data => { // hier komt de gecleande data vanuit de server weer binnen!
       doseTables_container.innerHTML = data
-    });
+      return data
+    })
+    .then(data => {
+      tablesToLocalStorage(data)
+    })
 }
 
-  // Example POST method implementation:
-  async function postData(url = '', data) {
-    // Default options are marked with *
-    const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
-      headers: {
-        // 'Content-Type': 'application/json'
-        // 'Content-Type': 'application/multipart/form-data'
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      redirect: 'follow', // manual, *follow, error
-      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
-    });
-    return response.json(); // parses JSON response into native JavaScript objects
-  }
+// Example POST method implementation:
+async function postData(url = '', data) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      // 'Content-Type': 'application/json'
+      // 'Content-Type': 'application/multipart/form-data'
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
 
 
 
@@ -82,12 +61,13 @@ function jsAvailable() {
 if (storageAvailable('localStorage')) {
   console.log('Yay! We can use localStorage')
   var loadButton = document.querySelector('#load')
-  var tablesElement = document.querySelector('#tablesElement')
-  if (tablesElement.innerHTML == 0) {
-    console.log("geen data te zien")
-  } else {
+
+  if (doseTables_container.innerHTML == 0) {
+    console.log("(nog) geen data te zien")
+  }
+  function tablesToLocalStorage(data) {
     console.log("set tables")
-    localStorage.setItem("tables", tablesElement.innerHTML)
+    localStorage.setItem("tables", data)
   }
 
   if (localStorage.getItem("tables") === null) {
@@ -96,7 +76,7 @@ if (storageAvailable('localStorage')) {
     console.log("er zit data in je localStorage 🤓")
     loadButton.addEventListener('click', function() {
       var savedTables = localStorage.getItem("tables")
-      tablesElement.innerHTML = savedTables
+      doseTables_container.innerHTML = savedTables
     })
   }
 } else {
@@ -126,4 +106,3 @@ function storageAvailable(type) {
       (storage && storage.length !== 0);
   }
 }
-jsAvailable()
