@@ -8,6 +8,10 @@ https://medi-track.herokuapp.com/
 
 - [✅ To-do](#--to-do)
 - [📋 Concept](#---concept)
+- [Layers of PE](#layers-of-pe)
+  * [HTML- Functional Layer](#html--functional-layer)
+  * [CSS- Usable Layer](#css--usable-layer)
+  * [JS- Pleasureable layer](#js--pleasureable-layer)
 - [⚙️ Installation](#---installation)
     + [Helpers/dependencies](#helpers-dependencies)
     + [🗃 Tech(stack)](#---tech-stack-)
@@ -18,7 +22,6 @@ https://medi-track.herokuapp.com/
 - [🏫 Assignment](#---assignment)
 - [Learning goals](#learning-goals)
 - [Planning](#planning)
-  * [[Rubric](https://github.com/deannabosschert/browser-technologies-1920)
 - [ℹ️ Resources](#---resources)
   * [Credits](#credits)
   * [Small inspiration sources](#small-inspiration-sources)
@@ -26,23 +29,34 @@ https://medi-track.herokuapp.com/
 
 <!-- tocstop -->
 
-## ✅ To-do
-- [ ] Test on different browsers and devices
-
-
 ## 📋 Concept
 _What does your app do, what is the goal? (passing butter)_
 
 This app is for keeping track of one's medicine intake. I constantly forget if I've taken it and I can't just take another one 'to be sure'. It's a common issue among people with similar medication so I figured it would be useful for future usage.
 
 
+## Layers of PE
+### HTML- Functional Layer
+You can add doses and view them below.
+![](https://paper-attachments.dropbox.com/s_E738BB6FFB4AEB2B6A43933E987688AE3C38F02D76F07524B4E0AA9AC643E50F_1593690476020_Screenshot+2020-07-02+at+13.47.23.png)
+
+### CSS- Usable Layer
+Added lots of styling, looks a lot better and readable now!
+![](https://paper-attachments.dropbox.com/s_E738BB6FFB4AEB2B6A43933E987688AE3C38F02D76F07524B4E0AA9AC643E50F_1593690557713_Screenshot+2020-07-02+at+13.49.11.png)
+
+
+### JS- Pleasureable layer
+As you can see, the current date and time are filled in by default.
+I've also added client-side data fetching so the page doesn't have to reload at every data change.
+![](https://paper-attachments.dropbox.com/s_E738BB6FFB4AEB2B6A43933E987688AE3C38F02D76F07524B4E0AA9AC643E50F_1593690589042_Screenshot+2020-07-02+at+13.49.42.png)
+
+<details>
+  <summary><strong>Sketches/design</strong> (click to expand)</summary>
 
 Homepage && Add dose (when user clicks on '+')
 ![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/public/img/documentation/wireframes_v2.png)
 
-<details>
-  <summary><strong>Full screenshots</strong> (click to expand)</summary>
-  
+
 Homepage
 
 ![homepage](https://github.com/deannabosschert/browser-technologies-1920/blob/master/public/img/documentation/screen_overview_v2.png)
